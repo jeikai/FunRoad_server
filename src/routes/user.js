@@ -1,9 +1,8 @@
-import { Router } from 'express';
-import { create, getAll, update} from '../controller/userController'
+const api = require("express").Router();
+const userController = require('../controller/userController')
 
-const api = Router()
 
-api.post('/api/user', create)
-api.get('/api/user', getAll)
-api.put('/api/user', update)
-export default api;
+api.post('/api/user', userController.create)
+api.get('/api/user', userController.getAll)
+api.put('/api/user', userController.update)
+module.exports = api

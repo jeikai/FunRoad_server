@@ -1,8 +1,8 @@
-import express from 'express';
-import cors from 'cors';
-import dotenv from 'dotenv';
-import routers from './src/routes/index.js';
-import connectDB from './src/config/mongodb.js';
+const express = require("express");
+const cors = require('cors');
+const dotenv = require('dotenv');
+const routers =  require('./src/routes/user.js');
+const connectDB = require('./src/config/mongodb.js');
 
 dotenv.config();
 connectDB();
